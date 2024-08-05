@@ -16,8 +16,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://account.api.intastellarsolutions.com/login.js"></script>
-        <link rel="stylesheet" href="https://account.api.intastellarsolutions.com/insign/style.css"></link>
+        <script src="https://account.api.intastellarsolutions.com/v1/login.js"></script>
+        <link rel="stylesheet" href="https://account.api.intastellarsolutions.com/v1/insign/style.css"></link>
         <Meta />
         <Links />
         <InjectScript />
