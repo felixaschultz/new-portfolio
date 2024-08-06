@@ -9,3 +9,14 @@
     width: 1200px;
     margin: auto;
 }
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}

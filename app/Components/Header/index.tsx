@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <header className="main-header">
             <section className="header-content">
-                <h1>Felix A. Schultz</h1>
+                <h1 className="logo">Felix A. Schultz</h1>
                 <nav className="navigation">
                     <a href="/">Home</a>
                     <a href="/about">About</a>

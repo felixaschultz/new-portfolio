@@ -1,6 +1,6 @@
 import "./Style.css";
 
-export default function Card({ children }: { children: React.ReactNode }) {
+export default function Card({ children }) {
     return (
         <article className="card">
             {children}

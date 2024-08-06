@@ -1,12 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
-import Card from "../Components/Card";
+import { Card, Banner } from "../Components";
 import { useEffect, useState } from "react";
 import "../Styles/User.css";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Felix A. Schultz" },
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
@@ -19,20 +19,10 @@ export default function Index() {
   }, []);
 
   return (
-    <main className="content">
-      <h1>Welcome to Remix!</h1>
-      <Card>
-        {User ? (
-          <>
-            <img src={User.user.avatar} alt="User Avatar" className="avatar" />
-            <div>
-              <h2>{User.user.name.firstName}</h2>
-              <p>{User.user.email}</p>
-              <a href={User.account_url} rel="noopener noreferrer" target="_blank">My Account</a>
-            </div>
-          </>
-        ) : null}
-      </Card>
+    <main>
+      <Banner />
+      <section className="content">
+      </section>
     </main>
   );
 }

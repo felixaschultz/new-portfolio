@@ -11,6 +11,10 @@ import { createReadableStreamFromReadable } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
+import connectDb from "./db/connectDb.server.js";
+
+/* DB Connection */
+connectDb();
 
 const ABORT_DELAY = 5_000;
 
@@ -26,17 +30,17 @@ export default function handleRequest(
 ) {
   return isbot(request.headers.get("user-agent") || "")
     ? handleBotRequest(
-        request,
-        responseStatusCode,
-        responseHeaders,
-        remixContext
-      )
+      request,
+      responseStatusCode,
+      responseHeaders,
+      remixContext
+    )
     : handleBrowserRequest(
-        request,
-        responseStatusCode,
-        responseHeaders,
-        remixContext
-      );
+      request,
+      responseStatusCode,
+      responseHeaders,
+      remixContext
+    );
 }
 
 function handleBotRequest(
