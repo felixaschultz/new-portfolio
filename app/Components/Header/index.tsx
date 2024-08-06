@@ -1,10 +1,11 @@
 import "./Style.css";
+import { Link } from "@remix-run/react";
 export default function Header() {
 
     return (
         <header className="main-header">
             <section className="header-content">
-                <h1 className="logo">Felix A. Schultz</h1>
+                <Link to="/"><h1 className="logo">Felix A. Schultz</h1></Link>
                 <nav className="navigation">
                     <a href="/">Home</a>
                     <a href="/about">About</a>
