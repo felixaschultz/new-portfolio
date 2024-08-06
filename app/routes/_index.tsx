@@ -26,7 +26,7 @@ export default function Index() {
           <>
             <img src={User.user.avatar} alt="User Avatar" className="avatar" />
             <div>
-              <h2>Welcome {User.user.name.firstName}</h2>
+              <h2>{User.user.name.firstName}</h2>
               <p>{User.user.email}</p>
               <a href={User.account_url} rel="noopener noreferrer" target="_blank">My Account</a>
             </div>

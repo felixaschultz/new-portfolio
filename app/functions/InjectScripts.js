@@ -13,7 +13,6 @@ const InjectScript = () => {
             function login(token) {
                 token = JSON.stringify(token);
                 sessionStorage.setItem('token', token);
-                window.location.reload();
             }
       `;
             document.body.appendChild(script);
