@@ -2,8 +2,8 @@ import "./Style.css";
 
 export default function Card({ children }: { children: React.ReactNode }) {
     return (
-        <div className="card">
+        <article className="card">
             {children}
-        </div>
+        </article>
     );
 }
