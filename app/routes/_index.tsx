@@ -23,6 +23,7 @@ export default function Index() {
       <Banner />
       <section className="content">
       </section>
+
     </main>
   );
 }

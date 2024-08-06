@@ -13,6 +13,7 @@ const InjectScript = () => {
             function login(token) {
                 token = JSON.stringify(token);
                 sessionStorage.setItem('token', token);
+                window.location.href = '/admin/dashboard';
             }
       `;
             document.body.appendChild(script);
