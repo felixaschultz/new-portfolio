@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "Portfolio",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -14,6 +14,7 @@
     "@remix-run/node": "^2.11.0",
     "@remix-run/react": "^2.11.0",
     "@remix-run/serve": "^2.11.0",
+    "@tinymce/tinymce-react": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "isbot": "^4.1.0",
     "mongoose": "^8.5.2",

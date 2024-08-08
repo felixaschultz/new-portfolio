@@ -7,8 +7,39 @@ body {
     font-family: Arial, sans-serif;
 }
 
+h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
 .content {
     width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about {
+    padding: 20px;
+    background-color: #2f3a3e;
+    color: #fff;
+}
+
+.about-info {
+    padding: 20px;
+}
+
+.about-img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
 }
