@@ -18,6 +18,14 @@ export const loader = async ({ params }) => {
     };
 };
 
+export const meta = ({ data }) => {
+    return [
+        {
+            title: data.title + " | Felix A. Schultz",
+        }
+    ];
+};
+
 export default function Project() {
     const { title, description } = useLoaderData();
     return (
