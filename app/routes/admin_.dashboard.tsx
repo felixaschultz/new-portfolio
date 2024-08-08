@@ -19,21 +19,17 @@ export const meta = [
 
 export default function AdminDashboard() {
     const { projects } = useLoaderData();
-    const { projectModalOpen, setProjectModalOpen } = useState(false);
+    const fetcher = useFetcher();
+    const editorRef = useRef(null);
+    const [projectModalOpen, setProjectModalOpen] = useState(false);
     const [image, setImage] = useState(null);
-    const [user, setUser] = useState(null);
 
     useEffect(() => {
         const User = sessionStorage.getItem("token") || null;
-        setUser(User);
+        if (User === null) {
+            return redirect("/");
+        }
     }, []);
-
-    if (user === null) {
-        return redirect("/");
-    }
-
-    const fetcher = useFetcher();
-    const editorRef = useRef(null);
 
     const handleChange = (e) => {
         const body = e;
@@ -146,7 +142,7 @@ export default function AdminDashboard() {
                                 onEditorChange={handleChange}
                             />
                             <textarea style={{
-                                display: "none"
+                                display: "block"
                             }} name="description" defaultValue={editorRef?.current?.getContent()}>
                                 {editorRef.current?.getContent()}
                             </textarea>
@@ -171,7 +167,7 @@ export const action = async ({ request }) => {
         if (!image) {
             return new Response(null, {
                 status: 400,
-                text: "Image is required",
+                statusText: "Bad Request",
             });
         }
     }
