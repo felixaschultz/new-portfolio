@@ -9,12 +9,11 @@ body {
 
 h2 {
     font-size: 1.7rem;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+pre {
+    border-radius: 5px;
 }
 
 .content {
@@ -26,6 +25,7 @@ p {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .about {
@@ -42,4 +42,11 @@ p {
     width: 600px;
     height: 600px;
     object-fit: cover;
+}
+
+.language-php {
+    background-color: #777BB4;
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
 }

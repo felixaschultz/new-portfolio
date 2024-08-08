@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
+import "../Styles/project.css";
+
 export const loader = async ({ params }) => {
     const project = await mongoose.model("Project").findOne({ link: params.id });
 
@@ -19,9 +21,9 @@ export const loader = async ({ params }) => {
 export default function Project() {
     const { title, description } = useLoaderData();
     return (
-        <article>
-            <h1>{title}</h1>
-            <div className="content" dangerouslySetInnerHTML={{
+        <article className="content">
+            <h1 className="project-title">{title}</h1>
+            <div dangerouslySetInnerHTML={{
                 __html: description
             }}></div>
         </article>

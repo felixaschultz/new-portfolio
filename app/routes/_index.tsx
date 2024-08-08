@@ -34,7 +34,7 @@ export default function Index() {
       <Banner />
       <section className="content">
         <article>
-          <div className="projects">
+          <div className="projects grid">
             {projects.map((project) => (
               <Card key={project._id} link={`/project/${project.link}`}>
                 <h3>{project.title}</h3>
