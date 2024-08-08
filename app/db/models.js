@@ -31,6 +31,10 @@ const projectSchema = new Schema({
     link: {
         type: String,
     },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const AnalyticsSchema = new Schema([
